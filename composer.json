@@ -1,0 +1,15 @@
+{
+    "name": "jodylecompte/nova-board",
+    "description": "A PHP and MySQL discussion forum software",
+    "type": "project",
+    "require": {
+        "filp/whoops": "^2.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jody LeCompte",
+            "email": "jody@jodylecompte.com"
+        }
+    ]
+}
