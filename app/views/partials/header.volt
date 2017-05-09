@@ -17,15 +17,15 @@
                 </div>
                 <div class="collapse navbar-collapse navbar-menubuilder">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a href="/">Home</a>
+                        <li><a href="{{ url('') }}">Home</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">Login</a>
+                            <a href="{{ url('login') }}">Login</a>
                         </li>
                         <li>
-                            <a href="#">Register</a>
+                            <a href="{{ url('register') }}">Register</a>
                         </li>
                     </ul>
                 </div>
@@ -33,12 +33,4 @@
         </div>
         </header>
     <div class="container">
-        <?=$this->getContent();?>
-    </div>
-    <footer class="text-center">
-        Powered by NovaBoard 0.1 Alpha
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
-</html>
+        

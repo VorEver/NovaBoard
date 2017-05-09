@@ -1,3 +1,4 @@
+{{ partial('partials/header') }}
 <div class="row">
     <div class="col-md-12">
         {% for category in boardData %}
@@ -26,3 +27,4 @@
         {% endfor %}
     </div>
 </div>
+{{ partial('partials/footer') }}
