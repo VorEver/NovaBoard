@@ -9,17 +9,18 @@
             <div class="panel-body">
                 <form class="form-horizontal">
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Username</label>
+                        <label class="col-md-4 control-label" for="username">Username</label>
                         <div class="col-md-8">
-                            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+                            <input id="username" name="username" type="text" placeholder="Enter your username or email..." class="form-control input-md">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="textinput">Password</label>
+                        <label class="col-md-4 control-label" for="password">Password</label>
                         <div class="col-md-8">
-                            <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+                            <input id="password" name="password" type="text" placeholder="Enter your password..." class="form-control input-md">
                             <a href="{{ url('forgot_password') }}">
-                                <span class="text-danger">Forgot Password?</span>
+                                <br />
+                                <p class="text-danger">Forgot Password?</p>
                             </a>
                         </div>
                     </div>
@@ -28,18 +29,18 @@
                         <div class="col-md-4">
                             <div class="checkbox">
                                 <label for="checkboxes-0">
-                                    <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1" />
+                                    <input type="checkbox" name="remember-me" id="remember-me" />
                                         <span class="hidden">Yes</span>
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="singlebutton">
+                        <label class="col-md-4 control-label" for="submit">
                             <span class="hidden">Submit</span>
                         </label>
                         <div class="col-md-4">
-                            <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+                            <button id="submit" name="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
 
