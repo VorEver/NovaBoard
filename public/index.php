@@ -20,7 +20,11 @@ use Phalcon\Db\Adapter\Pdo\Mysql as DbAdapter;
 use Phalcon\Mvc\View;
 use Phalcon\Mvc\View\Engine\Volt;
 
-try {
+
+$debug = new \Phalcon\Debug();
+$debug->listen(); 
+
+// try {
     // Initialize the loader and set default directories
     $loader = new Loader();
     $loader->registerDirs(
@@ -108,6 +112,6 @@ try {
     $application = new Application($di);
     $response = $application->handle();
     $response->send();
-} catch (\Exception $e) {
-    echo "Exception: ", $e->getMessage();
-}
+// } catch (\Exception $e) {
+//     echo "Exception: ", $e->getMessage();
+// }

@@ -1,7 +1,7 @@
 <?php
 use Phalcon\Mvc\Model;
 
-class Forum extends Model {
+class Forums extends Model {
     public $id;
     public $category_id;
     public $name;
@@ -10,8 +10,8 @@ class Forum extends Model {
     public $post_count;
 
     public function initialize() {
-        $this->setSource("nova_forum");
+        $this->setSource("nova_forums");
 
-        $this->belongsTo("category_id", "Category", "id");
+        $this->belongsTo("category_id", "Categories", "id");
     }
 }

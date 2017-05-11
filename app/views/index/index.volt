@@ -7,7 +7,7 @@
                 {{ category.name }}
             </div>
             <div class="panel-body">
-                {% for forum in category.forum %}
+                {% for forum in category.forums %}
                 <div class="row">
                     <div class="col-md-6">
                         <a href="#"><h4>{{ forum.name }}</h4></a>
