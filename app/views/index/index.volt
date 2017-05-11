@@ -11,7 +11,7 @@
                 {% for forum in category.forums %}
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="#"><h4>{{ forum.name }}</h4></a>
+                        <a href="{{ url('forums') }}/{{forum.slug}}"><h4>{{forum.name}}</h4></a>
                         <p>{{ forum.description }}</p>
                     </div>
                     <div class="col-md-3 text-center">
