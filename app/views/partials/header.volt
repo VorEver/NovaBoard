@@ -21,12 +21,21 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
+                        {% if userInformation !== null %}
+                        <li>
+                            <a href="#">Logged in as {{ userInformation['username'] }}</a> 
+                        </li>
+                        <li>
+                            <a href="{{ url('logout') }}">Log Out</a>
+                        </li>
+                        {% else %}
                         <li>
                             <a href="{{ url('login') }}">Login</a>
                         </li>
                         <li>
                             <a href="{{ url('register') }}">Register</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

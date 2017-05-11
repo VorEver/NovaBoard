@@ -1,11 +1,12 @@
 <?php
 use Phalcon\Mvc\Controller;
 
-class SessionController extends Controller {
+class SessionController extends BaseController {
     private function _registerSession($user) {
         $this->session->set('auth', [
             "id"   => $user->id,
-            "name" => $user->name 
+            "name" => $user->name,
+            "username" => $user->username
         ]);
     }
 

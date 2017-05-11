@@ -2,7 +2,11 @@
 use Phalcon\Mvc\Controller;
 use Model\Categories;
 
-class RegisterController extends Controller {
+class RegisterController extends BaseController {
     public function indexAction() {
+    }
+
+    public function processAction() {
+        if($this->)
     }
 }
