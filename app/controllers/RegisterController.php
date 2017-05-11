@@ -7,6 +7,5 @@ class RegisterController extends BaseController {
     }
 
     public function processAction() {
-        if($this->)
     }
 }
