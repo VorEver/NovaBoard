@@ -1,4 +1,5 @@
 {{ partial('partials/header') }}
+{{ flash.output() }}
 <div class="row">
     <div class="col-md-12">
         {% for category in boardData %}

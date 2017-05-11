@@ -7,7 +7,7 @@
                 Login
             </div>
             <div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="{{ url('session/start') }}">
                     <div class="form-group">
                         <label class="col-md-4 control-label" for="username">Username</label>
                         <div class="col-md-8">

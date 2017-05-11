@@ -1,7 +1,5 @@
 <?php
-
 use Phalcon\Mvc\Controller;
-use Model\Categories;
 
 class SessionController extends Controller {
     private function _registerSession($user) {
@@ -9,8 +7,6 @@ class SessionController extends Controller {
             "id"   => $user->id,
             "name" => $user->name 
         ]);
-    
-    
     }
 
     public function startAction() {
@@ -21,6 +17,34 @@ class SessionController extends Controller {
         $username = $this->request->getPost('username');
         $password = $this->request->getPost('password');
         
-        $user = User::FindFirst
+        $user = Users::FindFirst([
+            "(email = :username: OR username = :username:) AND password = :password: AND active = 'Y'",
+            "bind" => [
+                "username"    => $username,
+                "password" => md5($password),
+            ]
+        ]);
+         if ($user !== false) {
+                $this->_registerSession($user);
+
+                $this->flash->success(
+                    "Welcome " . $user->name
+                );
+
+                // Forward to the 'invoices' controller if the user is valid
+                return $this->response->redirect('');
+            }
+
+            $this->flash->error(
+                "Wrong email/password"
+            );
+
+        // Forward to the login form again
+        return $this->dispatcher->forward(
+            [
+                "controller" => "session",
+                "action"     => "index",
+            ]
+        );
     }
 }
